@@ -1,0 +1,55 @@
+<mxfile host="app.diagrams.net" modified="2026-08-14T00:00:00.000Z" agent="opencode" version="24.0.0" type="device">
+  <diagram id="boot-process" name="Boot Process">
+    <mxGraphModel dx="1100" dy="700" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="1900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s1" value="Power On" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EAF2F8;strokeColor=#154360;fontColor=#154360;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="60" width="300" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" value="BIOS / UEFI Initialization&#xa;&#xa;POST, hardware detection, firmware setup" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F9FC;strokeColor=#2471A3;fontColor=#1A5276;fontSize=14;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="220" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" value="Boot Device Detection&#xa;&#xa;Firmware locates the bootable disk or EFI partition" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F9FC;strokeColor=#2471A3;fontColor=#1A5276;fontSize=14;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="390" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" value="Boot Loader (GRUB)&#xa;&#xa;GRUB menu appears, kernel image is selected and loaded" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F9FC;strokeColor=#2471A3;fontColor=#1A5276;fontSize=14;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="560" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" value="Linux Kernel&#xa;&#xa;Kernel is decompressed into memory and mounts the root filesystem" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F9FC;strokeColor=#2471A3;fontColor=#1A5276;fontSize=14;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="730" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" value="init / systemd&#xa;&#xa;First process (PID 1) starts and reads unit files" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F9FC;strokeColor=#2471A3;fontColor=#1A5276;fontSize=14;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="900" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s7" value="Services Start&#xa;&#xa;Networking, ssh, cron, and other enabled services launch" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F4F9FC;strokeColor=#2471A3;fontColor=#1A5276;fontSize=14;arcSize=8;" vertex="1" parent="1">
+          <mxGeometry x="200" y="1070" width="500" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="s8" value="Login Prompt&#xa;&#xa;user@server01:~$" style="ellipse;whiteSpace=wrap;html=1;fillColor=#EAFAF1;strokeColor=#1E8449;fontColor=#145A32;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="300" y="1240" width="300" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="s1" target="s2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="s2" target="s3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="s3" target="s4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="s4" target="s5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="s5" target="s6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="s6" target="s7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeWidth=2;" edge="1" parent="1" source="s7" target="s8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
